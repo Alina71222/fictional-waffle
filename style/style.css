@@ -1,20 +1,97 @@
-@font-face {
-	font-family: “Pudelinka”;
-	src: url(”Fonts/pudelinka.ttf” ) format('truetype’);
-	font-weight: normal;
-	font-style: normal;
-}
-body{
-	blockquote.q {
-	color: #D4AF37;
-	border-left: 4px solid #8B0000;
-	font-style: italic;
-}
-	background-color: #d2b48c;
-	margin-left: 20%;
-	margin-right: 20%;
-	border: 2px dotted black;
-	padding: 10px 10px 10px 10px;
-	font-family: sans serif;
-    }
-p.quote { font-family: “Pudelinka”, cursive;}
+<style>
+      /* Цветовая палитра */
+      :root {
+        --bg-color: #f9f7f0;
+        --text-color: #2c3e50;
+        --accent-color: #e74c3c;
+        --highlight-color: #3498db;
+        --success-color: #27ae60;
+        --quote-bg: #eef5db;
+        --quote-border: #b7d7a8;
+        --card-bg: #ffffff;
+        --link-color: #2980b9;
+        --date-color: #7f8c8d;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h2 {
+        color: var(--accent-color);
+        border-bottom: 2px solid var(--highlight-color);
+        padding-bottom: 6px;
+        margin-top: 30px;
+      }
+
+      h3 {
+        color: var(--highlight-color);
+        margin-top: 20px;
+      }
+
+      p, ul, li {
+        margin: 10px 0;
+      }
+
+      code {
+        background-color: #f1f1f1;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+        color: var(--accent-color);
+      }
+
+      strong {
+        color: var(--success-color);
+      }
+
+      blockquote {
+        background-color: var(--quote-bg);
+        border-left: 4px solid var(--quote-border);
+        padding: 12px 16px;
+        margin: 20px 0;
+        font-style: italic;
+        color: #2c3e50;
+        border-radius: 0 8px 8px 0;
+      }
+
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: var(--accent-color);
+      }
+
+      .cipher-section {
+        background-color: var(--card-bg);
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        margin: 20px 0;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .created-date {
+        font-weight: bold;
+        color: var(--date-color);
+        font-size: 1.1em;
+        margin-bottom: 20px;
+      }
+    </style>
