@@ -1,43 +1,142 @@
- <!DOCTYPE html> 
+<!DOCTYPE html> 
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой блог</title>
-    <link type="text/css" rel="stylesheet" href="style.css">
+    <style>
+      /* Цветовая палитра */
+      :root {
+        --bg-color: #f9f7f0;
+        --text-color: #2c3e50;
+        --accent-color: #e74c3c;
+        --highlight-color: #3498db;
+        --success-color: #27ae60;
+        --quote-bg: #eef5db;
+        --quote-border: #b7d7a8;
+        --card-bg: #ffffff;
+        --link-color: #2980b9;
+        --date-color: #7f8c8d;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h2 {
+        color: var(--accent-color);
+        border-bottom: 2px solid var(--highlight-color);
+        padding-bottom: 6px;
+        margin-top: 30px;
+      }
+
+      h3 {
+        color: var(--highlight-color);
+        margin-top: 20px;
+      }
+
+      p, ul, li {
+        margin: 10px 0;
+      }
+
+      code {
+        background-color: #f1f1f1;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+        color: var(--accent-color);
+      }
+
+      strong {
+        color: var(--success-color);
+      }
+
+      blockquote {
+        background-color: var(--quote-bg);
+        border-left: 4px solid var(--quote-border);
+        padding: 12px 16px;
+        margin: 20px 0;
+        font-style: italic;
+        color: #2c3e50;
+        border-radius: 0 8px 8px 0;
+      }
+
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: var(--accent-color);
+      }
+
+      .cipher-section {
+        background-color: var(--card-bg);
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        margin: 20px 0;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .created-date {
+        font-weight: bold;
+        color: var(--date-color);
+        font-size: 1.1em;
+        margin-bottom: 20px;
+      }
+    </style>
   </head>
   <body>
-    <p>Создано: 19 января 2026 года</p>
+    <p class="created-date">Создано: 19 января 2026 года</p>
 
     <!-- Новые записи с решениями шифров -->
-    <h2>19 января 2026</h2>
-    <h3>Решение задач по шифру Цезаря</h3>
-    
-    <p><strong>1. Определение ключей шифра Цезаря:</strong></p>
-    <ul>
-      <li><strong>а.</strong> Открытый текст: АПЕЛЬСИН → Шифротекст: САЦЬНВЩЮ<br>
-          Ключ: <code>k = 17</code></li>
-      <li><strong>б.</strong> Открытый текст: АБРИКОС → Шифротекст: ЫЬЛГЕЙМ<br>
-          Ключ: <code>k = 27</code> (эквивалентно сдвигу на –5)</li>
-    </ul>
+    <div class="cipher-section">
+      <h2>19 января 2026</h2>
+      <h3>Решение задач по шифру Цезаря</h3>
+      
+      <p><strong>1. Определение ключей шифра Цезаря:</strong></p>
+      <ul>
+        <li><strong>а.</strong> Открытый текст: АПЕЛЬСИН → Шифротекст: САЦЬНВЩЮ<br>
+            Ключ: <code>k = 17</code></li>
+        <li><strong>б.</strong> Открытый текст: АБРИКОС → Шифротекст: ЫЬЛГЕЙМ<br>
+            Ключ: <code>k = 27</code> (эквивалентно сдвигу на –5)</li>
+      </ul>
 
-    <p><strong>2. Расшифровка сообщений:</strong></p>
-    <ul>
-      <li><strong>а.</strong> Шифротекст: ФХНЗКЧ → Открытый текст: <strong>ПРИВЕТ</strong> (ключ = 5)</li>
-      <li><strong>б.</strong> Шифротекст: ЦЩЕБФ → Открытый текст: <strong>ШКОЛА</strong> (ключ = 4)</li>
-    </ul>
+      <p><strong>2. Расшифровка сообщений:</strong></p>
+      <ul>
+        <li><strong>а.</strong> Шифротекст: ФХНЗКЧ → Открытый текст: <strong>ПРИВЕТ</strong> (ключ = 5)</li>
+        <li><strong>б.</strong> Шифротекст: ЦЩЕБФ → Открытый текст: <strong>ШКОЛА</strong> (ключ = 4)</li>
+      </ul>
 
-    <p><strong>3. Шифрование фамилии с ключом 10:</strong></p>
-    <p>Фамилия: <em>БЕЛЯКОВА</em> → Зашифровано: <strong>ЛПХЙФШМК</strong></p>
+      <p><strong>3. Шифрование фамилии с ключом 10:</strong></p>
+      <p>Фамилия: <em>БЕЛЯКОВА</em> → Зашифровано: <strong>ЛПХЙФШМК</strong></p>
+    </div>
 
     <!-- Существующий контент блога -->
-    <p> Домен: alina71222.github.io.</p>
+    <p>Домен: alina71222.github.io.</p>
     <p><a href="mailto:alinabelaykova06111989@gmail.com">Напишите мне</a></p>
     
     <blockquote class="q">Путешествие в тысячу миль начинается с одного шага (Лао Цзы)</blockquote>
 
     <h2>1 декабря, 2025</h2>
     <p>
-      <img src="Icons/champagne_3847278.html" alt="Новый год">
+      <img src="Icons/champagne_3847278.html" alt="Новый год" style="max-width:100px; vertical-align:middle;">
       Поздравление с Наступающим 2026 годом читайте <a href="Congratulations2026.html">здесь</a>.
     </p>
 
